@@ -44,5 +44,34 @@ namespace Aprikot_test.Controllers
             }
             _domainModelPostgreSqlContext.SaveChanges();
         }
+        [HttpGet ("GetSongTable")]
+        public IEnumerable<SongItem> GetSongTable() 
+        {
+           var songs = _domainModelPostgreSqlContext.Songs.ToArray() ;
+           var referencesId = songs.Select(x => _domainModelPostgreSqlContext.References.Where(y => x.Id == y.Song).ToArray()).ToArray();
+           var albums = referencesId.Select(x =>
+           {
+               var albumId = x.First().Album;
+               return _domainModelPostgreSqlContext.Albums.FirstOrDefault(y => y.Id == albumId);
+           }).ToArray();
+           var authors = referencesId.Select(x =>
+           {
+               var authorIds = x.Select(y => y.Author).ToArray();
+               return authorIds.Select(y => _domainModelPostgreSqlContext.Authors.First(z => z.Id == y)).ToArray();
+           }).ToArray();
+           var songItems = new List<SongItem>();
+           for (var i = 0; i < songs.Length; i++)
+           {
+               songItems.Add(new SongItem
+               {
+                   Song = songs[i].Name,
+                   Album = albums[i]?.Name,
+                   Year = albums[i]?.Year,
+                   Authors = authors[i].Select(x=>x.Name)
+               });
+           }
+
+           return songItems;
+        }
     }
 }
