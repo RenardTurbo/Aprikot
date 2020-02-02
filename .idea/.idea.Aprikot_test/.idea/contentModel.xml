@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\nordday\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nordday\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Aprikot_test.1443858153.00" t="ExcludeRecursive" />
+    <e p="C:\Users\nordday\Desktop\projects\Aprikot" t="IncludeFlat">
+      <e p="Aprikot_test" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Aprikot_test.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AlbumsController.cs" t="Include" />
+          <e p="AuthorsController.cs" t="Include" />
+          <e p="ReferencesController.cs" t="Include" />
+          <e p="SongsController.cs" t="Include" />
+        </e>
+        <e p="DomainModelPostgreSqlContext.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20200202152044_postgresqlMigration.cs" t="Include" />
+          <e p="20200202152044_postgresqlMigration.Designer.cs" t="Include" />
+          <e p="DomainModelPostgreSqlContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Album.cs" t="Include" />
+          <e p="AlbumForUpdate.cs" t="Include" />
+          <e p="Author.cs" t="Include" />
+          <e p="AuthorsForUpdate.cs" t="Include" />
+          <e p="Reference.cs" t="Include" />
+          <e p="Song.cs" t="Include" />
+          <e p="SongInfo.cs" t="Include" />
+          <e p="SongItem.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Aprikot_test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="StyleSheet.css" t="Include" />
+          </e>
+          <e p="Index.html" t="Include" />
+          <e p="js" t="Include">
+            <e p="JavaScript.js" t="Include" />
+          </e>
+          <e p="Redact.html" t="Include" />
+        </e>
+      </e>
+      <e p="Aprikot_test.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

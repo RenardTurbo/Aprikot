@@ -2,15 +2,17 @@
 using Aprikot_test;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Aprikot_test.Migrations
 {
     [DbContext(typeof(DomainModelPostgreSqlContext))]
-    partial class DomainModelPostgreSqlContextModelSnapshot : ModelSnapshot
+    [Migration("20200202152044_postgresqlMigration")]
+    partial class postgresqlMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

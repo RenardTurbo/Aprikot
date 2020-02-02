@@ -7,8 +7,10 @@ namespace Aprikot_test.Models
 {
     public class SongItem
     {
-        public IEnumerable<string> Authors { get; set; }
+        public long Id { get; set; }
+        public IEnumerable<Author> Authors { get; set; }
         public string Album { get; set; }
+        public long? AlbumId { get; set; }
         public string Song { get; set; }
         public int? Year { get; set; }
     }
