@@ -93,7 +93,7 @@ function updateSong(id){
     let songName = $(`#updateSong_${id}`).val() ;
     let year = $(`#updateYear_${id}`).val() ;
     
-    console.log("GLOBAL_HUYJATA", GLOBAL_DATA);
+    console.log( GLOBAL_DATA);
     let tableItem = GLOBAL_DATA.filter(tableItem=>tableItem.id === id)[0];
     //EDIT AUTHORS
     $.ajax({
@@ -115,11 +115,11 @@ function updateSong(id){
         contentType:"application/json; charset=utf-8",
         dataType: 'json',
         data: JSON.stringify({
-            "album":{
+
                 "Id": +tableItem.albumId,
                 "Name": albumName,
-                "Year": year
-            },
+                "Year": +year
+    
         }),
 
     });
@@ -130,10 +130,9 @@ function updateSong(id){
         contentType:"application/json; charset=utf-8",
         dataType: 'json',
         data: JSON.stringify({
-            "song":{
-                "Id": +tableItem.songId,
+
+                "Id": +id,
                 "Name": songName
-            },
         }),
 
     });

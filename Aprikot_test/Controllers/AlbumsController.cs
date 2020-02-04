@@ -32,11 +32,12 @@ namespace Aprikot_test.Controllers
         }
         
         [HttpPost("EditAlbum")]
-        public void EditAlbum([FromBody] Album albumForUpdate)
+        public void EditAlbum([FromBody] Album album)
         {
-            var album = _domainModelPostgreSqlContext.Albums.First(x => x.Id == albumForUpdate.Id);
-            album.Name = albumForUpdate.Name;
-            album.Year = albumForUpdate.Year;
+ 
+            var album1 = _domainModelPostgreSqlContext.Albums.First(x => x.Id == album.Id);
+            album1.Name = album.Name;
+            album1.Year = album.Year;
             _domainModelPostgreSqlContext.SaveChanges();
         }
     }
